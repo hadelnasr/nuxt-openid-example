@@ -1,0 +1,19 @@
+{
+  "name": "nuxt-openid-example",
+  "version": "1.0.0",
+  "description": "testing project for authenticating using openid with 3rd parties and nuxt bridge",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadelnasr/nuxt-openid-example.git"
+  },
+  "author": "haytham.adel376@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hadelnasr/nuxt-openid-example/issues"
+  },
+  "homepage": "https://github.com/hadelnasr/nuxt-openid-example#readme"
+}
