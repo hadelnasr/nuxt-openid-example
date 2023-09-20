@@ -4,7 +4,10 @@
   "description": "testing project for authenticating using openid with 3rd parties and nuxt bridge",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "nuxi-dev": "NODE_OPTIONS=--openssl-legacy-provider nuxi dev --port 3000",
+    "nuxi-build": "NODE_OPTIONS='--openssl-legacy-provider --max-old-space-size=10240' nuxi build",
+    "nuxi-start": "NODE_OPTIONS='--openssl-legacy-provider --max-old-space-size=10240' nuxi preview"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/hadelnasr/nuxt-openid-example/issues"
   },
-  "homepage": "https://github.com/hadelnasr/nuxt-openid-example#readme"
+  "homepage": "https://github.com/hadelnasr/nuxt-openid-example#readme",
+  "dependencies": {
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-27389502.88da719",
+    "@nuxtjs/auth": "^4.9.1",
+    "dotenv": "^16.3.1",
+    "nuxi": "^3.8.4",
+    "nuxt": "^2.15.8"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
 }
