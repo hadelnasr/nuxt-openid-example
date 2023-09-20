@@ -1,15 +1,22 @@
 <!-- login.vue -->
 <template>
   <div>
-    logout
+    <div>
+      Profile Data: {{$auth.user}}
+    </div>
+    <br/>
+    <div>
+      <a href="/" @click="$auth.logout()">logout</a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   middleware: ["auth"],
-  methods: {
 
-  },
+  mounted() {
+    console.log(this.$auth.loggedIn);
+  }
 };
 </script>

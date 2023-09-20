@@ -11,15 +11,11 @@ export default {
   methods: {
     async loginWithGoogle() {
       try {
-        await this.$auth.loginWith('customLoginWithGoogle');
-        console.log(this.$auth.loggedIn);
+        await this.$auth.loginWith('google');
       } catch (error) {
         console.error('Google login failed:', error);
       }
     },
   },
-  mounted() {
-    console.log(this.$auth.loggedIn);
-  }
 };
 </script>
