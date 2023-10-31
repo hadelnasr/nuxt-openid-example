@@ -46,7 +46,6 @@ export default defineNuxtConfig({
             },
             customLoginStrategy: {
                 authorization_endpoint: process.env.CUSTOM_OPENID_AUTHORIZATION_ENDPOINT,
-                response_type: process.env.CUSTOM_OPENID_RESPONSE_TYPE,
                 client_id: process.env.CUSTOM_OPENID_CLIENT_ID,
                 endpoints: {
                     configuration: process.env.CUSTOM_OPENID_CONFIGURATION_URL
@@ -57,9 +56,9 @@ export default defineNuxtConfig({
                     prefix: '_id_token.',
                     expirationPrefix: '_id_token_expiration.'
                 },
-                responseType: 'code',
-                grantType: 'authorization_code',
-                scope: ['openid','profile','offline_access'],
+                response_type: process.env.CUSTOM_OPENID_RESPONSE_TYPE,
+                grant_type: process.env.CUSTOM_OPENID_GRANT_TYPE,
+                scope: process.env.CUSTOM_OPENID_SCOPE,
                 codeChallengeMethod: 'S256',
                 _scheme: '~/schemes/customAuthScheme'
             }

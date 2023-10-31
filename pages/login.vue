@@ -2,7 +2,7 @@
 <template>
   <div>
     <h1>Login</h1>
-    <button @click="loginWithGoogle">Login with Google</button>
+<!--    <button @click="loginWithGoogle">Login with Google</button>-->
     <button @click="loginWithNafeza">Login with Nafeza</button>
   </div>
 </template>
@@ -19,7 +19,10 @@ export default {
     },
     async loginWithNafeza() {
       try {
-        await this.$auth.loginWith('customLoginStrategy');
+        await this.$auth.loginWith('customLoginStrategy', {
+          prompt: 'consent',
+          resource: 'urn:egwin:api',
+        });
       } catch (error) {
         console.error('Login failed:', error);
       }
